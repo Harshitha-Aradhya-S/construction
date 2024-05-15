@@ -3,8 +3,13 @@
     --headerclr:#222533;
     --mainclr:#ffcb0f;
 }
-body{
-    width: 100%
+body {
+    overflow-x: hidden;
+  }
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 *{
     margin: 0;
@@ -36,7 +41,7 @@ body{
     }
 }
 nav{
-    background-color:  white;
+    background-color: white;
     box-shadow: 3px 3px 5px black;
   }
   nav ul{
@@ -59,9 +64,13 @@ nav{
   }
   nav a:hover{
     background-color: black;
-    color: #ffcb0f;
+    color: white;
+  }
+#active {
+    background-color:#72A0C1;
   }
   nav li:first-child{
+    font-size: 2rem;
     margin-right: auto;
   }
   .sidebar{
@@ -89,9 +98,9 @@ nav{
     display: none;
   }
   @media screen and (max-width: 896px) {
-    body{
-        width: 100%
-    }
+    body {
+        overflow-x: hidden;
+          }
     .hideOnMobile{
       display: none;
     }
@@ -107,7 +116,7 @@ nav{
 
 .hero{
     display: flex;
-    /* width: 100%; */
+    width: 100%;
     gap: 2rem;
 }
 .hero_div{
@@ -160,12 +169,8 @@ nav{
 }
 
 @media screen and (max-width: 896px) {
-    /* .hero{
-        width: 100%;
-        padding: 1rem;
-    } */
     .hero_left{
-        width: 70%;
+        width: 80%;
         height: 70%;
         margin: 1rem;
         position: left;
@@ -194,6 +199,7 @@ nav{
         padding: 1rem;
     }
     .first-btn, .second-btn{
+        width: 10rem;
         padding: 1rem 4rem;
         border-radius: 5px;
         font-size: 1.5rem;
@@ -270,56 +276,8 @@ nav{
     }
   }
 
-
-/*.welcome{
-    padding: 3rem;
-}
-
-.main-welcome{
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.inner-welcome{
-    flex: 1 1 45rem;
-}
-.inner-welcome .left{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-.welcome-text{
-    width: 30%;
-}
-.welcome-text h1{
-    font-size: 40px;
-    color: var(--mainclr);
-
-}
-.welcome-text p{
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    margin-bottom: 25px;
-}
-.welcome-text a{
-    padding: 1.5rem 4rem;
-    background: var(--mainclr);
-    color: var(--headerclr);
-    font-size: 1.5rem;
-    border-radius: 15px;
-}
-.welcome-text a:hover{
-    background: var(--headerclr);
-    color: white;
-}
-.inner-welcome img{
-width: 80%;
-} */
- 
 .our-services{
+    margin-top: 2rem;
     padding: 2rem;
 }
 .our-services h1{
