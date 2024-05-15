@@ -277,10 +277,14 @@ nav{
   }
 
 .our-services{
+    background-color: rgba(133, 141, 133, 0.15);
+    backdrop-filter: blur(12px);
     margin-top: 2rem;
     padding: 2rem;
 }
 .our-services h1{
+    background-color: rgba(102, 109, 102, 0.15);
+    color: var(--mainclr);
     font-size: 40px;
     text-align: center;
     padding: 1rem 0;
@@ -289,7 +293,7 @@ nav{
 
 }
 .our-services h1 span{
-    color: var(--mainclr);
+    color: white;
 }
 
 .main-service{
@@ -390,10 +394,6 @@ text-decoration: none;
         margin: 0.5rem;
         padding: 0.2rem;
         gap: 2.5rem;
-        /* display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        height: 30rem; */
     }
     
     .inner-service{
@@ -408,12 +408,6 @@ text-decoration: none;
         padding: -0.5rem;   
         border: 0.01rem solid rgb(17, 17, 17);
         border-radius: 3rem;
-/*         
-        display: flex;
-        flex-wrap: wrap;
-        height: 10rem;
-        width: 10rem;
-        margin: 0rem; */
     }
     
     .inner-service_img{
@@ -489,15 +483,22 @@ transform: translateY(-25px);
     font-size: 1rem;
     padding: 0 1rem;
 }
+.our-gallery{
+    background-color: rgba(133, 141, 133, 0.15);
+    backdrop-filter: blur(12px);
 
+}
 .our-gallery h1{
-    color: var(--headerclr);
+    margin-top: 1.7rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem 0;
+    background-color: rgba(102, 109, 102, 0.15);
+    color: var(--mainclr);
     font-size: 40px;
     text-align: center;
-    margin-bottom: 6rem;
 }
 .our-gallery h1 span{
-    color: var(--mainclr);
+    color: white;
 }
 .main-gallery{
     display: flex;
