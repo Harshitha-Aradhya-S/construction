@@ -1,233 +1,611 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction</title>
-    
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;1,100&family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --headerclr:#222533;
+    --mainclr:#ffcb0f;
+}
+body {
+    overflow-x: hidden;
+    overflow-x: clip !important;
+  }
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-    <div class="banner">
-        <video autoplay loop muted plays-inline>
-            <source src="images/bg_video.mp4" type="video/mp4">
-        </video>
-        <nav>
-            <ul class="sidebar">
-              <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26" color="blue"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Construction</a></li>
-              <li class="hideOnMobile" id="active"><a href="#">Home</a></li>
-              <li class="hideOnMobile"><a href="#">About</a></li>
-              <li class="hideOnMobile"><a href="#">Services</a></li>
-              <li class="hideOnMobile"><a href="#">Projects</a></li>
-              <li class="hideOnMobile"><a href="#">Blog</a></li>
-              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-            </ul>
-          </nav>
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: .2s;
+    font-family: 'Segoe UI', Tahoma, Geneva,'Roboto', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+    background-position: center;
+    background-size: center;
+}
 
-    <div class="hero">
-        <div class="hero_div">
-            <div class="hero_left">
-                <h1>Building Your <br>
-                <span>Vision With Precision</span></h1>
-                <p>
-                    We are .... , your trusted partner in the world of construction.<br>
-                    With a legacy of excellence and a commitment to quality, we turn your vision into reality
-                </p>
-                    <div class="inner-back-btn">
-                        <a href="" class="first-btn">Learn more</a>
-                        <a href="" class="second-btn">view projects</a>
-                    </div>
-            </div>
-            <div class="login">
-                <div class="text">
-                    <h1>Login</h1>
-                    <input type="text" class="text_inp1" placeholder="Enter Username">
-                    <input type="password" class="text_inp2" placeholder="Enter password">
-                    <p>Forgot password ?</p>
-                    <button class="login_button">Login</button>
-                    <p>Not a member? <span>Sign Up</span></p>
-                </div>
-            </div>
-        </div>
-    </div><br><br>
-<!-- Our company -->
-    <!-- <div class="welcome">
-        <div class="main-welcome">
-            <div class="inner-welcome left">
-                <div class="welcome-text left">
-                    <h1>welcome to our company</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Obcaecati assumenda, expedita perspiciatis ab commodi atque libero, iusto tempora ratione eaque a eligendi ad pariatur laudantium fugiat, amet officiis! Et, repudiandae.</p>
-                    <a href="#" class="wel-btn">read more</a>
-                </div>
-            </div>
-            <div class="inner-welcome right">
-                <img src="images/side images.png" alt="">
-            </div>
-        </div>
-    </div>  -->
-
-<!-- our services -->
-<div>
-    <div class="our-services">
-        <h1>our <span>services</span></h1>
-        <div class="main-service">
-            <div class="inner-service" id="">
-                <a href="">
-                    <img src="images/Residential.jpeg" class="inner-service_img" alt="">
-                    <h2 class="inner-service-h2">Residential Construction</h2>
-                </a>
-            </div>
-
-            <div class="inner-service" id="">
-                <a href="">
-                    <img src="images/Renovation.jpg" class="inner-service_img" alt="">
-                    <h2 class="inner-service-h2">Renovation/<br> Remodeling</h2>
-                </a>
-            </div>
-
-            <div class="inner-service" id="">
-                <a href="">
-                    <img src="images/Commercial.jpg" class="inner-service_img" alt="">
-                    <h2 class="inner-service-h2">Commercial Construction</h2>
-                </a>
-            </div>
-        </div>
-    </div>  
-
-<!-- Why us ? -->
-
-    <div class="chose-us">
-        <h1>why <span>chose</span>  us</h1>
-        <div class="main-chose">
-            <div class="inner-chose">
-                <div class="chose-icon">
-                    <i class="fa-brands fa-buromobelexperte"></i>
-                </div>
-                <h2>Expertise and Experience</h2>
-                <p>Highlight the number of years your company has been in business and emphasize the collective experience of your team. Mention any specializations or unique skills that set your company apart.</p>
-            </div>
-    
-            <div class="inner-chose">
-                <div class="chose-icon">
-                    <i class="fa-solid fa-clock"></i>
-                </div>
-                <h2>Reliability and Timeliness</h2>
-                <p>Assure potential clients that you adhere to deadlines and deliver projects on time and within budget. Highlight any guarantees or warranties you offer for your work.</p>
-            </div>
-    
-            <div class="inner-chose">
-                <div class="chose-icon">
-                    <i class="fa-solid fa-bell-concierge"></i>
-                </div>
-                <h2>Attention to Detail</h2>
-                <p> Communicate your meticulous attention to detail in every aspect of the construction process, from planning and design to execution and finishing touches.</p>
-            </div>
-    
-            <div class="inner-chose">
-                <div class="chose-icon">
-                    <i class="fa-solid fa-lightbulb"></i>
-                </div>
-                <h2>Innovative Solutions</h2>
-                <p>Showcase any innovative techniques, materials or technology. Highlight your ability to problem-solve and adapt to unique project challenges.</p>
-            </div>
-        </div>
-    </div>
-</div><br>
-
-<!-- our projects -->
-<div class="our-gallery">
-    <h1>Our <span>Projects</span></h1>
-    <div class="main-gallery">
-        <div class="inner-gallery">
-            <img src="images/project1.jpg" alt="">
-        </div>
-
-        <div class="inner-gallery">
-            <img src="images/project2.jpg" alt="">
-        </div>
-
-        <div class="inner-gallery">
-            <img src="images/project3.jpg" alt="">
-        </div>
-
-        <div class="inner-gallery">
-            <img src="images/project4.jpg" alt="">
-        </div>
-
-        <div class="inner-gallery">
-            <img src="images/project5.jpg" alt="">
-        </div>
-
-        <div class="inner-gallery">
-            <img src="images/project6.jpg" alt="">
-        </div>
-    </div>
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col">
-                <h4>company</h4>
-                <ul>
-                    <li><a href="#">  xyz ,</a></li>
-                    <li><a href="#">Bengaluru,562110 </a></li>
-                    <li><a href="#">abc@gmail.com</a></li>
-                    <li><a href="#">1234567891</a></li>
-                </ul>
-            </div>
-            <div class="footer-col" id="links">
-                <h4>Links</h4>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">our services</a></li>
-                    <li><a href="#">privacy policy</a></li>
-                </ul>
-            </div>
-            <div class="footer-col" id="services">
-                <h4>services</h4>
-                <ul>
-                    <li><a href="#">Design Series</a></li>
-                    <li><a href="#">Pro Series</a></li>
-                    <li><a href="#">Pro Platform</a></li>
-                    <li><a href="#">Shelter</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>follow us</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-</div>
-<script>
-    function showSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'flex'
+.banner video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .banner video{
+        width: 100%;
+        height: auto;
     }
-    function hideSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'none'
+}
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px black;
+  }
+  nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  nav li{
+    height: 50px;
+  }
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+  nav a:hover{
+    background-color: black;
+    color: white;
+  }
+#active {
+    background-color:#72A0C1;
+  }
+  nav li:first-child{
+    font-size: 2rem;
+    margin-right: auto;
+  }
+  .sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  @media screen and (max-width: 896px) {
+    body {
+        overflow-x: hidden;
+          }
+    .hideOnMobile{
+      display: none;
     }
-  </script>
+    .menu-button{
+      display: block;
+    }
+  }
+  @media screen and (max-width: 896px) {
+    .sidebar{
+      width: 100%;
+    }
+  }
 
-</body>
-</html>
+.hero{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+}
+.hero_div{
+    display: flex;
+}
+
+.hero_left{
+    width: 100%;
+    height: 100%;
+    margin: 4rem;
+    position: left;
+    text-align: center;
+}
+.hero_left h1{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 5rem;
+    text-transform: uppercase;
+    margin: 0.5rem;
+}
+.hero_left h1 span{
+    color: var(--mainclr);
+    text-transform: uppercase;
+}
+.hero_left p{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding: 1rem;
+}
+.inner-back-btn{
+    display: flex;
+    justify-content: center;
+}
+.inner-back-btn a{
+    margin-right: 1rem;
+}
+.first-btn, .second-btn{
+    padding: 1.5rem 4rem;
+    background: var(--mainclr);
+    border-radius: 15px;
+    color: var(--headerclr);
+    font-size: 1.5rem;
+}
+.first-btn:hover, .second-btn:hover{
+    background: var(--headerclr);
+    color: white;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width: 896px) {
+    .hero_left{
+        width: 80%;
+        height: 70%;
+        margin: 1rem;
+        position: left;
+        text-align: center;
+    }
+
+    .hero_left h1{
+        font-size: 30px;  
+        text-align: centre;
+    }
+
+    .hero_left h1 span{
+        font-size: 30px;
+        color: var(--mainclr);
+        text-transform: uppercase;
+    }
+    .hero_left p{
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        padding: 1rem;
+    }
+    .hero_left p{
+        font-size: 1rem;
+        margin-bottom: 10px;
+        padding: 1rem;
+    }
+    .first-btn, .second-btn{
+        width: 10rem;
+        padding: 1rem 4rem;
+        border-radius: 5px;
+        font-size: 1.5rem;
+    }
+}
+
+.login{
+    width: 500px;
+    height: 400px;
+    margin: 8rem 3rem 0rem 0rem;
+    text-align: center;
+    border: 1px solid #222533;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
+}
+.login h1{
+    font-size: 3rem;
+    color: black;
+}
+.login .text{
+    position: relative;
+    top: 1rem;
+}
+
+.text_inp1, .text_inp2 {
+    border: none;
+    border-bottom: 3px solid black;
+    width: 12rem;
+    margin: 2rem;
+    font-size: 1.3rem;
+    outline: none;
+    color: black;
+    background-color: rgba(133, 141, 133, 0.15);
+    backdrop-filter: blur(12px);
+
+}
+.text_inp2 {
+    margin: 0 2rem 1rem 2rem;
+}
+.text p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}   
+.text p span{
+    color:  #0841b4;
+}
+.login_button{
+    width: 10rem;
+    height: 3.5rem;
+    color: white;
+    /* background-image: linear-gradient(to left,#ff99ff,#6666ff);  */
+    background-color: #00308F;
+    font-size: 2rem;
+    border-radius: 7rem;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+}
+
+.login_button:hover{
+    font-size: 1.7rem;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width: 896px) {
+    .login{
+      display: none;
+    }
+  }
+@media(max-width: 400px){
+    .login{
+      display: none;
+    }
+  }
+
+.our-services{
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.our-services h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+
+}
+.our-services h1 span{
+    color: var(--mainclr);
+}
+
+.main-service{
+    display: flex;
+    justify-content: centre;
+    align-items: centre;
+    flex-wrap: wrap;
+    margin: 1rem;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: -1rem;
+    gap: 2rem;    
+    margin: 2rem; */
+ }
+
+.inner-service{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    height: 20rem;
+    gap: 2rem; 
+    width: calc(33.33% - 2rem);
+    background-color: rgb(240, 236, 236);
+    border: 0.01rem solid rgb(17, 17, 17);
+    border-radius: 3rem;
+    transition: transform 0.3s ease-in-out;
+
+/* display: flex;
+flex-wrap: wrap;
+flex-direction: column; 
+justify-content: center;
+align-items: center;
+text-align: center;
+height: 30rem;
+width: calc(33.33% - 2rem);
+padding: 1.5rem;
+border: 1px solid rgb(189, 186, 186);
+border-radius: 2.5rem; */
+}
+
+.inner-service_img{
+    width: 100%;
+    height: 12rem;
+    align-items:center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.inner-service-h2{
+    align-items:center;
+    text-align: center;
+    color: black;
+    font-size: 1.5rem;
+    margin: 0.5rem 0.5rem ;
+    padding: 0.5rem;
+
+    /* justify-content: center;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.2rem;
+    text-align: centre;
+    padding-left: auto;
+    padding-right: auto; */
+}
+.inner-service-h2 a{
+text-decoration: none;
+}
+
+.inner-service:hover {
+    background-color: black;
+    border-color: black;
+    transform: scale(1.2);
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+.inner-service:hover .inner-service-h2{
+    color: white;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 896px) {
+    .our-services{
+        padding: 1rem;
+    }
+
+    .main-service{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        gap: 2.5rem;
+        /* display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 30rem; */
+    }
+    
+    .inner-service{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 13rem;
+        width: calc(60% - 0.5rem);
+        gap: 0.2rem;
+        margin: -0.7rem;
+        padding: -0.5rem;   
+        border: 0.01rem solid rgb(17, 17, 17);
+        border-radius: 3rem;
+/*         
+        display: flex;
+        flex-wrap: wrap;
+        height: 10rem;
+        width: 10rem;
+        margin: 0rem; */
+    }
+    
+    .inner-service_img{
+        margin-left: auto;
+        margin-right: auto;
+        height: 6rem;
+        width: 9rem;
+        margin: 1.1rem 1.1rem 0rem 1.1rem;
+    } 
+    .inner-service-h2{
+        font-size: 1.1rem;
+    }
+}
+
+.chose-us{
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #72A0C1;
+    /* background-color: #36454F; */
+}
+.chose-us h1{
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem 1rem 4rem 1rem;
+}
+.chose-us h1 span{
+    color: var(--mainclr);
+}
+.chose-text{
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem 10rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-chose{
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.inner-chose{
+    flex: 1 1 200px;
+}
+.chose-icon{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border: 8px solid var(--mainclr);
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.chose-icon i{
+    font-size: 40px;
+    color: white;
+    transition: .5s;
+}
+.chose-icon i:hover{
+color: var(--headerclr);
+transform: translateY(-25px);
+}
+.inner-chose h2{
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.inner-chose p{
+    color: rgb(17, 17, 17);
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.our-gallery h1{
+    color: var(--headerclr);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.our-gallery h1 span{
+    color: var(--mainclr);
+}
+.main-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.inner-gallery{
+    flex: 1 1 300px;
+}
+.inner-gallery img{
+    width: 100%;
+    height: 300px;
+    transition: .5s;
+    border: 2px solid black;
+}
+.inner-gallery img:hover{
+    transform: translateY(-25px);
+}
+
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media screen and (max-width: 896px) {
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  #links, #services{
+    display: none;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  #links, #services{
+    display: none;
+  }
+  }
